@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NetcoreAPI_BTVN21.Models;
+using NetcoreAPI_BTVN21.Service;
 
 namespace NetcoreAPI_BTVN21.Controllers
 {
