@@ -1,0 +1,6 @@
+@NetcoreAPI_BTVN21_HostAddress = http://localhost:5184
+
+GET {{NetcoreAPI_BTVN21_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
