@@ -14,7 +14,7 @@ namespace NetcoreAPI_BTVN21.Service
         }
 
 
-        public async Task<IEnumerable<Product>> GetAllProducts()
+        public async Task<List<Product>> GetAllProducts()
         {
             return await _context.Products.ToListAsync();
         }

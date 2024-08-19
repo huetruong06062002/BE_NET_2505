@@ -4,7 +4,7 @@ namespace NetcoreAPI_BTVN21.Service
 {
     public interface  IProductRepository
     {
-        Task<IEnumerable<Product>> GetAllProducts();
+        Task<List<Product>> GetAllProducts();
         Task<Product> GetProductById(int id);
         Task<IEnumerable<Product>> SearchProductsByName(string name);
         Task<Product> AddProduct(Product product);

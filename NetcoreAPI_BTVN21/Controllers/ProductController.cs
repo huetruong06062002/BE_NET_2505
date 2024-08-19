@@ -17,7 +17,7 @@ namespace NetcoreAPI_BTVN21.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<List<Product>>> GetProducts()
         {
             return Ok(await _productRepository.GetAllProducts());
         }
