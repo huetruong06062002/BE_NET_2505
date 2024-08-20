@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BE_2505_NetCoreAPI", "BE_25
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetcoreAPI_BTVN21", "NetcoreAPI_BTVN21\NetcoreAPI_BTVN21.csproj", "{11593515-1597-45C8-933F-33F19AAFC611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_NET_2505", "BE_NET_2505\BE_NET_2505.csproj", "{A3030EE5-02DE-4036-8474-73457F87F948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BE_NET_2505", "BE_NET_2505\BE_NET_2505.csproj", "{A3030EE5-02DE-4036-8474-73457F87F948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_NetFamework", "ConsoleApp_NetFamework\ConsoleApp_NetFamework.csproj", "{7C10DFD7-7656-4F57-A022-1AE35EB90096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A3030EE5-02DE-4036-8474-73457F87F948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3030EE5-02DE-4036-8474-73457F87F948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3030EE5-02DE-4036-8474-73457F87F948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C10DFD7-7656-4F57-A022-1AE35EB90096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C10DFD7-7656-4F57-A022-1AE35EB90096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C10DFD7-7656-4F57-A022-1AE35EB90096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C10DFD7-7656-4F57-A022-1AE35EB90096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

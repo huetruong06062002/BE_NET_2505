@@ -1,0 +1,6 @@
+- Frame Work - Bộ thư viện viết sẵn : các hàm, class viết sẵn
+			 - Môi trường để chạy . Code C# => Byte Code => Mã máy (1010....)
+			 
+- Kiểu dữ liệu là tập hợp các nhóm dữ liệu có điểm chung: đặc tính, cách lưu trữ, thao tác xử lý			 
+
+- Biến cục bộ, biến toàn cục
