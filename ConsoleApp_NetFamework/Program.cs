@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_NetFamework
 {
-    internal class Program
+    public class Program
     {
 
         static void ThamChieu(out int a)
@@ -21,10 +21,32 @@ namespace ConsoleApp_NetFamework
             a = 20;
             b = 10;
         }
-            
+
+        struct Student_Struct
+        {
+            //thuộc tính
+            public string _name;
+            public int _id;
+
+            //Hàm khởi tạo - Không có kiểu dữ liệu trả về
+
+            public Student_Struct(string Name, int Id)
+            {
+                this._name = Name;
+                this._id = Id;
+            }
+
+            //Phương thức         
+            public string Run()
+            {
+                return "running";
+            }
+        }
+
+
         void TinhTongHaiSo(int a, int b)
         {
-           Console.WriteLine("Tong hai so: {0}", a + b);
+            Console.WriteLine("Tong hai so: {0}", a + b);
         }
 
 
@@ -101,7 +123,7 @@ namespace ConsoleApp_NetFamework
             int n;
             bool isNumeric = int.TryParse(input, out n);
 
-            if(!isNumeric)
+            if (!isNumeric)
             {
                 return false;
             }
@@ -173,12 +195,12 @@ namespace ConsoleApp_NetFamework
             var secondInput = Console.ReadLine();
             var checkSecondInput = CheckValidateInput(secondInput);
 
-            if(!checkFirstInput || !checkSecondInput)
+            if (!checkFirstInput || !checkSecondInput)
             {
                 Console.WriteLine("Du lieu dau vao khong hop le");
                 return;
             }
-           
+
 
 
 
@@ -200,7 +222,7 @@ namespace ConsoleApp_NetFamework
 
             int testOUt;
 
-            
+
             int result = ThamChieuWithOut(out testOUt);
 
             Console.WriteLine($"Before use out  {testOUt}");
@@ -213,7 +235,7 @@ namespace ConsoleApp_NetFamework
 
             int zero = 0;
 
-          
+
 
             try
             {
@@ -249,18 +271,51 @@ namespace ConsoleApp_NetFamework
             }
 
 
-            try
-            {
-                Console.Write("Nhap du lieu");
-                string s = Console.ReadLine();
-                UserInput(s);
-            }
-            catch (DataTooLongException ex)
-            {
-                Console.WriteLine("Data is too long");
-            }
+            //try
+            //{
+            //    Console.Write("Nhap du lieu");
+            //    string s = Console.ReadLine();
+            //    UserInput(s);
+            //}
+            //catch (DataTooLongException ex)
+            //{
+            //    Console.WriteLine("Data is too long");
+            //}
 
-            
+
+            //------------------------------
+            List<int> numbers = new List<int>() {
+               10 ,30, 20
+            };
+
+            char[] my_string = { 'h', 'e', 'l', 'l', 'o' };
+            numbers.Sort();
+
+
+            Console.WriteLine(numbers);
+
+            var student = new Student_Struct();
+
+
+            var std = new Student_Struct("Truong", 12345);
+
+            var std1 = new Student_Struct();
+            std1._name = "Truong 1";
+            std1._id = 54321;
+
+            Console.WriteLine("Struct std ");
+
+            Console.WriteLine("Struct Name={0}", std._name);
+            Console.WriteLine("Struct Name={0}", std._id);
+            Console.WriteLine("Struct run={0}", std.Run());
+
+
+            Console.WriteLine("Struct std1");
+
+            Console.WriteLine("Struct Name={0}", std1._name);
+            Console.WriteLine("Struct Name={0}", std1._id);
+            Console.WriteLine("Struct run={0}", std1.Run());
+
         }
     }
 }
