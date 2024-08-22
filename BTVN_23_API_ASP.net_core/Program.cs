@@ -18,6 +18,19 @@ namespace BTVN_23_API_ASP.net_core
             // Đăng ký UnitOfWork sau khi ApplicationDbContext đã được đăng ký
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            // Đăng ký dịch vụ CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin() // Thay thế bằng URL của frontend của bạn
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                     
+                    });
+            });
+
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -33,6 +46,10 @@ namespace BTVN_23_API_ASP.net_core
             }
 
             app.UseHttpsRedirection();
+
+            app.UseRouting(); // Phải đặt trước UseCors và UseAuthorization
+
+            app.UseCors("AllowSpecificOrigins"); // Đặt trước UseAuthorization
 
             app.UseAuthorization();
 
