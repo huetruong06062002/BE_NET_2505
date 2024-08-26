@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Space, Table, Tag } from 'antd';
 import type { TableProps } from 'antd';
 import { ProductListProps } from './Layout';
-import { Product } from '../interface/Produc';
+import { Product } from '../../interface/Produc';
 import { ColumnsType } from 'antd/es/table';
 
 interface DataType {

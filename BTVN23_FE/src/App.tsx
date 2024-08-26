@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { getProducts } from './api/product';
 import { Layout } from 'antd';
-import Main from './component/Layout';
+import Main from './component/Product/Layout';
 import { Product } from './interface/Produc';
+import CounterComponent from './component/CouterComponent';
+
 
 function App() {
 

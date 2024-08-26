@@ -8,7 +8,9 @@ import {
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import TableCustom from './Table';
-import { Product } from '../interface/Produc';
+import { Product } from '../../interface/Produc';
+import ModalCreate from './ModalCreate';
+
 
 const { Header, Sider, Content } = Layout;
 
@@ -72,6 +74,7 @@ const Main: React.FC<ProductListProps> = ({products}) => {
             borderRadius: borderRadiusLG,
           }}
         >
+          <ModalCreate/>
          <TableCustom products= {products}/>
         </Content>
       </Layout>
