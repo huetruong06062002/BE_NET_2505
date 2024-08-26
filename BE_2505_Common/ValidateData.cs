@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp_NetFamework;
 
 namespace BE_2505_Common
 {
@@ -14,6 +15,9 @@ namespace BE_2505_Common
 			{
 				return false;
 			}
+
+			var myClass = new MyClassDilivery();
+		
 			return true;
 		}
 	}

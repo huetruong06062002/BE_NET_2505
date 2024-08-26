@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using BE_2505_Common;
 
 namespace ConsoleApp_NetFamework
 {
@@ -559,6 +560,51 @@ namespace ConsoleApp_NetFamework
 			{
 				Console.Write("{0} \n", obj);
 			}
+
+
+            //=--------------------------------Buổi 7-----------------------    
+
+            var myClass = new MyClassDilivery();
+            myClass.Id = 1;
+            myClass.Name = "Xe 4 Chỗ";
+
+			var myClass1 = new MyClassDilivery();
+			myClass1.Id = 1;
+			myClass1.Name = "Xe 4 Chỗ";
+
+			var staticclass_propertiess = StaticClass.Id;
+
+            var staticClass = StaticClass.TestStatic();
+
+
+
+            var bird = new Bird();
+            bird.Name = "Bird";
+            bird.Eat();
+
+
+            //c1: ít thuộc tính
+            var xeKhach = new XeKhach("TOYOTA", "LEXUS", 2024);
+
+            //c2: nhiều thuộc tính
+			var xeKhach2 = new XeKhach { 
+               brand = "TOYOTA 2", 
+               model =  "LEXUS 3", 
+               year = 2024 
+            };
+
+			//c3: nhiều thuộc tính
+			var xeKhach3 = new XeKhach();
+			xeKhach3.brand = "TOYOTA 3";
+            xeKhach3.model = "LEXUS 3";
+            xeKhach3.year = 2024;
+
+
+			Console.WriteLine("infor 1 {0}", xeKhach.display_info());
+			Console.WriteLine("infor 2 {0}", xeKhach2.display_info());
+			Console.WriteLine("infor 3 {0}", xeKhach3.display_info());
+
+
 		}
 	}
 }

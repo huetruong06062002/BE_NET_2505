@@ -1,11 +1,11 @@
 ﻿using BTVN_23_API_ASP.net_core.Repositories.Interface;
-using BTVN_23_API_ASP.net_core.Repositories;
-using BTVN_23_API_ASP.net_core.Models;
 using Microsoft.EntityFrameworkCore;
+using BTVN_23_API_ASP.net_core.DB;
+using BTVN_23_API_ASP.net_core.Repositories.Implement;
 
 namespace BTVN_23_API_ASP.net_core
 {
-    public class Program
+	public class Program
     {
         public static void Main(string[] args)
         {
