@@ -640,6 +640,11 @@ namespace ConsoleApp_NetFamework
 
 			Console.WriteLine("ChieuDai maylenovo: {0}", maylenovo.ChieuDai + "\n");
 			Console.WriteLine("ChieuRong maylenovo: {0}", maylenovo.ChieuRong + "\n");
+
+
+
+			//var classb = new ClassB(a);
+			//Console.WriteLine("classb = {0}", classb.Tong());
 		}
 	}
 }

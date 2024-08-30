@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALImpl\DeveloperDALImpl.cs" />
+    <Compile Include="DALImpl\LaoCongDALImpl.cs" />
     <Compile Include="DALImpl\StudentManager.cs" />
+    <Compile Include="DALImpl\EcomnomicStudentImpl.cs" />
+    <Compile Include="DAL\IAttendanceDAL.cs" />
     <Compile Include="DAL\IStudentDAL.cs" />
+    <Compile Include="DAL\IStudy.cs" />
+    <Compile Include="DALImpl\ITStudentImpl.cs" />
+    <Compile Include="DTO\ClassB.cs" />
+    <Compile Include="DTO\ClassA.cs" />
     <Compile Include="DTO\Employeer.cs" />
     <Compile Include="DTO\MayTinhDELL.cs" />
     <Compile Include="DTO\MayTinhLENOVO.cs" />

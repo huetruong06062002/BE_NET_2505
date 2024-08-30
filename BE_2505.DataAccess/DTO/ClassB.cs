@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace BE_2505.DataAccess.DTO
 {
-	public abstract class Employeer 
+
+	public class ClassB
 	{
-		public abstract string working();
+
+		public ClassB(int a)
+		{
+
+		}
+
+		public int Tong()
+		{
+			ClassA ca = new ClassA();
+
+			return ca.TinhTong();
+		}
 	}
 }
