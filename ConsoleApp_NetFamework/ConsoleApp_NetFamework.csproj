@@ -87,9 +87,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BE_2505_Common\BE_2505_Common.csproj">
+    <ProjectReference Include="..\BE_2505.Common\BE_2505.Common.csproj">
       <Project>{ab123bea-1a9e-4eda-864a-5448e275a388}</Project>
-      <Name>BE_2505_Common</Name>
+      <Name>BE_2505.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BE_2505.DataAccess\BE_2505.DataAccess.csproj">
+      <Project>{644ecc67-fa0e-4ff8-9908-298229869077}</Project>
+      <Name>BE_2505.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
