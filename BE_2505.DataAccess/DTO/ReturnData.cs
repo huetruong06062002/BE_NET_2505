@@ -19,4 +19,10 @@ namespace BE_2505.DataAccess.DTO
 	
 	}
 
+	public class StudentDelete_ResponseData : ReturnData
+	{
+		
+
+	}
+
 }

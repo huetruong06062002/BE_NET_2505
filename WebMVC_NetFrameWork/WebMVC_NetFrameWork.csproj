@@ -234,6 +234,12 @@
       <DependentUpon>202407180137074_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE_2505.DataAccess\BE_2505.DataAccess.csproj">
+      <Project>{644ecc67-fa0e-4ff8-9908-298229869077}</Project>
+      <Name>BE_2505.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

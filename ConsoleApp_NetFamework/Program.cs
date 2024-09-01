@@ -599,30 +599,30 @@ namespace ConsoleApp_NetFamework
 
 			var studentDate8 = new BE_2505.DataAccess.DALImpl.StudentManager();
 
-			var studentDate8_Req = new BE_2505.DataAccess.DTO.Student
-			{
-				Id = Guid.NewGuid(),
-				Name = "MR truong",
-				DateOfBirth = DateTime.Now
-			};
+			//var studentDate8_Req = new BE_2505.DataAccess.DTO.Student
+			//{
+			//	Id = Guid.NewGuid(),
+			//	Name = "MR truong",
+			//	DateOfBirth = DateTime.Now
+			//};
 
 
 			//studentDate8_Req.setFullName("MR Quaan");
 
 			//Console.WriteLine("Full Name {0}", studentDate8_Req.GetFullName());
 
-			var resultDate8 = studentDate8.Student_Insert(studentDate8_Req);
+			//var resultDate8 = studentDate8.Student_Insert(studentDate8_Req);
 
-			if (resultDate8.ResponseData < 0)
-			{
-				Console.WriteLine("Thông báo lỗi {0}", resultDate8.ResponseMessenger);
-			}
-			else
-			{
-				Console.WriteLine("Thông báo : {0}", resultDate8.ResponseMessenger);
-				Console.WriteLine("id student : {0}", resultDate8.studentId);
+			//if (resultDate8.ResponseData < 0)
+			//{
+			//	Console.WriteLine("Thông báo lỗi {0}", resultDate8.ResponseMessenger);
+			//}
+			//else
+			//{
+			//	Console.WriteLine("Thông báo : {0}", resultDate8.ResponseMessenger);
+			//	Console.WriteLine("id student : {0}", resultDate8.studentId);
 
-			}
+			//}
 
 
 			var maydell = new MayTinhDELL();
@@ -645,6 +645,21 @@ namespace ConsoleApp_NetFamework
 
 			//var classb = new ClassB(a);
 			//Console.WriteLine("classb = {0}", classb.Tong());
+
+
+
+			var list = studentDate8.GetStudents();
+
+			if (list.Count > 0)
+			{
+				foreach (var item in list)
+				{
+					Console.WriteLine("Name: {0}", item.Name);
+					Console.WriteLine("Name: {0}", item.Name);
+					Console.WriteLine("Name: {0}", item.Name);
+
+				}
+			}
 		}
 	}
 }

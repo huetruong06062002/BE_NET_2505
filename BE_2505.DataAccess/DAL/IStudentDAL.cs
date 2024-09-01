@@ -10,5 +10,11 @@ namespace BE_2505.DataAccess.DAL
 	public interface IStudentDAL
 	{
 		StudentInsert_ResponseData Student_Insert(Student requestData);
+
+		List<Student> GetStudents();
+
+		StudentInsert_ResponseData StudentInsert_EF(Student student);
+
+		StudentDelete_ResponseData student_Remove(int studentId);
 	}
 }
