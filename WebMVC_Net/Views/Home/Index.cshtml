@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model List<BE_2505.DataAccess.DTO.Student>
+<div class="jumbotron">
+    <h1>LỚP ASP.NET BACKEND 2505 NGÀY @DateTime.Now.ToString("dd/MM/yyyy")</h1>
+    @Html.ActionLink("bấm vào đây", "abc", "test")
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                    </tr>
+                }
+            }
+
+
+        </tbody>
+    </table>
+</div>

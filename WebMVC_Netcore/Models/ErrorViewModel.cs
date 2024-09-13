@@ -1,9 +1,9 @@
-namespace WebMVC_Netcore.Models
+namespace WebMVC_netCore.Models
 {
-    public class ErrorViewModel
-    {
-        public string? RequestId { get; set; }
+	public class ErrorViewModel
+	{
+		public string? RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-    }
+		public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+	}
 }
