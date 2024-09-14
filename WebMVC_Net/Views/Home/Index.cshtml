@@ -29,3 +29,45 @@
         </tbody>
     </table>
 </div>
+
+@*cách 1: Giới hạn tham số truyền vào*@
+@*@Html.Action("DemoPartialView", "Home", new {id = 10})*@
+
+
+@*cách 2 :*@
+@*@Html.Partial("~/Views/Home/DemoPartialView.cshtml");*@
+
+
+<div id="PartialViewData">
+
+</div>
+
+
+
+@*cách 3: Không giới hạn tham số truyền vào *@
+<script>
+    $(document).ready(function () {
+        loadPartialView();
+    });
+
+    function loadPartialView() {
+        $.ajax({
+            url: '/Home/DemoPartialView',
+            type: "POST",
+            data: {
+
+            },
+            contentType: "html",
+            success: function (response) {
+                //load partialviwe vào thẻ div
+
+                $("#PartialViewData").html("");
+                $("#PartialViewData").html(response);
+            },
+            error: function (xhr, status, error) {
+                alert("Có lỗi xảy ra: " + error)
+            }
+
+        });
+    }
+</script>
