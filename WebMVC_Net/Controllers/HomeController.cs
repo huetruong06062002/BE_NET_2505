@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using WebMVC_Net.Filter;
 
 namespace WebMVC_Net.Controllers
 {
 	public class HomeController : Controller
 	{
+
+		[Log]
 		public ActionResult Index(int ? id)
 		{
 			var lst = new List<BE_2505.DataAccess.DTO.Student>();
@@ -30,6 +33,9 @@ namespace WebMVC_Net.Controllers
 		//[NonAction]
 		//[HttpPost]		
 
+
+
+		[HttpPost]
 		
 		public ActionResult About()
 		{

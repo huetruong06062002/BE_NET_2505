@@ -10,4 +10,8 @@
     <PackageReference Include="EntityFramework" Version="6.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BE_2505.DataAccess.Netcore\BE_2505.DataAccess.Netcore.csproj" />
+  </ItemGroup>
+
 </Project>
