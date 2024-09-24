@@ -486,3 +486,4 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+/BE_2505.DataAccess.Netcore/DALImpl/StudentManager.cs
