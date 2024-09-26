@@ -19,8 +19,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+//app.Run(async context =>
+//{
+//	await context.Response.WriteAsync("Hello world!");
+//});
 
-app.UseMiddleware<MyCustomMiddleWare>();
+//app.UseMiddleware<MyCustomMiddleWare>();
+
+app.UseCustomMiddleware();
 
 app.UseHttpsRedirection();
 
