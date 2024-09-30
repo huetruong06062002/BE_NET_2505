@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BE_2505.Common.Netcore;
 using BE_2505.DataAccess.Netcore.DAL;
 using BE_2505.DataAccess.Netcore.DTO;
-using BE_2505.Common.Netcore;
+
 
 namespace BE_2505.DataAccess.Netcore.DALImpl
 {
@@ -18,7 +19,7 @@ namespace BE_2505.DataAccess.Netcore.DALImpl
 
 			try
 			{
-				var passwordHash = Security.GetSaltedHash(requestData.Password);
+				var passwordHash =  BE_2505.Common.Netcore.Security.GetSaltedHash(requestData.Password);
                 returnData.ResponseMessenger = passwordHash;
 
             }

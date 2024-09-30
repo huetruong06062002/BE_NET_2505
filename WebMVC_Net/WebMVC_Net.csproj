@@ -223,6 +223,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE_2505.DataAccess.Netcore\BE_2505.DataAccess.Netcore.csproj">
+      <Project>{f06e44ab-11e4-45af-ac98-b8a713884b29}</Project>
+      <Name>BE_2505.DataAccess.Netcore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BE_2505.DataAccess\BE_2505.DataAccess.csproj">
       <Project>{644ecc67-fa0e-4ff8-9908-298229869077}</Project>
       <Name>BE_2505.DataAccess</Name>

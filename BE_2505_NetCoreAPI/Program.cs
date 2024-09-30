@@ -1,3 +1,5 @@
+using BE_2505.DataAccess.Netcore.DAL;
+using BE_2505.DataAccess.Netcore.DALImpl;
 using BE_2505_NetCoreAPI;
 using BE_2505_NetCoreAPI.Services;
 
@@ -10,6 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductService, ProductServiceImpl>();
+builder.Services.AddScoped<IAccountDAO, AccountDAOImpl>();
+builder.Services.AddScoped<IStudentDAL, StudentManager>();
 var app = builder.Build();
 
 //MiDDLEWARE
