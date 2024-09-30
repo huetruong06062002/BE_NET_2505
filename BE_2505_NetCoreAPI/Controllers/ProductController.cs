@@ -1,4 +1,7 @@
-﻿using BE_2505_NetCoreAPI.Services;
+﻿
+using BE_2505.DataAccess.Netcore.DAL;
+using BE_2505.DataAccess.Netcore.DTO;
+using BE_2505.DataAccess.Netcore.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BE_2505_NetCoreAPI.Controllers
@@ -9,17 +12,48 @@ namespace BE_2505_NetCoreAPI.Controllers
     public class ProductController : ControllerBase
     {
 
-        private readonly IProductService _productService;
+   //     private readonly IProductRepository _productRepository;
 
-        public ProductController(IProductService productService)
+   //     public ProductController(IProductRepository productRepository)
+   //     {
+			//_productRepository = productRepository;
+   //     }
+
+        private readonly IUnitOfWork_BE_2505 _unitOfWork;
+
+        public ProductController(IUnitOfWork_BE_2505 unitOfWork)
         {
-            _productService = productService;
+			_unitOfWork = unitOfWork;
+		}
+        [HttpPost("GetProduct")]
+        public async Task<ActionResult> GetProduct(ProductGetListRequestData requestData)
+        {
+            try
+            {
+                var list = await _unitOfWork._productRepository.GetProduct(requestData);
+                return Ok(list);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
-        [HttpGet("GetListProduct")]
-        public async Task<ActionResult> GetListProduct()
+
+
+        [HttpPost("ProductInsertUpdate")]
+        public async Task<ActionResult> GetProduct(Product requestData)
         {
-            var products = _productService.GetListProduct();
-            return Ok(products);
+            try
+            {
+				var list = await _unitOfWork._productRepository.ProductInsertUpdate(requestData, 1);
+				return Ok(list);
+			}
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }
