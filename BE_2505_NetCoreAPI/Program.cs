@@ -1,6 +1,7 @@
 using BE_2505.DataAccess.Netcore.DAL;
 using BE_2505.DataAccess.Netcore.DALImpl;
 using BE_2505.DataAccess.Netcore.DBContext;
+using BE_2505.DataAccess.Netcore.DTO;
 using BE_2505.DataAccess.Netcore.UnitOfWork;
 using BE_2505_NetCoreAPI;
 using BE_2505_NetCoreAPI.Services;
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IAccountDAO, AccountDAOImpl>();
 builder.Services.AddScoped<IStudentDAL, StudentManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUnitOfWork_BE_2505, UnitOfWork_BE_2505>();
+builder.Services.AddScoped<IProductGenericRepository, ProductGenericRepository>();
 
 var app = builder.Build();
 

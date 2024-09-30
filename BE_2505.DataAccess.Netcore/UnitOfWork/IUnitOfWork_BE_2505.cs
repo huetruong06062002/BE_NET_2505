@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using BE_2505.DataAccess.Netcore.DAL;
+using BE_2505.DataAccess.Netcore.DTO;
 
 namespace BE_2505.DataAccess.Netcore.UnitOfWork
 {
 	public interface IUnitOfWork_BE_2505
 	{
-		public IProductRepository _productRepository { get; set; };
-
+		public IProductRepository _productRepository { get; set; }
+		IProductGenericRepository _productGenericRepository { get; set; }
 		int SaveChanges();
 
 
