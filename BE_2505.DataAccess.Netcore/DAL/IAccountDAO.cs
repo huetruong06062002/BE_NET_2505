@@ -10,5 +10,7 @@ namespace BE_2505.DataAccess.Netcore.DAL
     public interface IAccountDAO
     {
         Task<AccountLoginResponseData> Login(AccountLoginRequestData requestData);
+
+        Task<int> AccountLogin_UpdateRefreshToken(AccountLogin_UpdateRefreshTokenRequestData requestData) ;
     }
 }

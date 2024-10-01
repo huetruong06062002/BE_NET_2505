@@ -1,11 +1,13 @@
+using System.Text;
 using BE_2505.DataAccess.Netcore.DAL;
 using BE_2505.DataAccess.Netcore.DALImpl;
 using BE_2505.DataAccess.Netcore.DBContext;
-using BE_2505.DataAccess.Netcore.DTO;
 using BE_2505.DataAccess.Netcore.UnitOfWork;
 using BE_2505_NetCoreAPI;
 using BE_2505_NetCoreAPI.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -15,6 +17,20 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<BE_25_05_DbContext>(options =>
 			   options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+	options.TokenValidationParameters = new TokenValidationParameters
+	{
+		ValidateIssuer = false,
+		ValidateAudience = false,
+		ValidateLifetime = false,
+		ValidateIssuerSigningKey = false,
+		ValidIssuer = builder.Configuration["Jwt:ValidAudience"],
+		ValidAudience = builder.Configuration["Jwt:ValidIssuer"],
+		IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]))
+	};
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -41,6 +57,10 @@ if (app.Environment.IsDevelopment())
 //});
 
 //app.UseMiddleware<MyCustomMiddleWare>();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.UseCustomMiddleware();
 
